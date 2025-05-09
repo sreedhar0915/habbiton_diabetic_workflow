@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:habbiton_diabetic_workflow/utilis/constants/color_constants.dart';
-import 'package:habbiton_diabetic_workflow/view/dailylog_screen/dailylog_screen.dart';
+import 'package:habbiton_diabetic_workflow/helpers/app_colors.dart';
+import 'package:habbiton_diabetic_workflow/helpers/screen_config.dart';
+import 'package:habbiton_diabetic_workflow/screens/diabetic_workflow_screens/dailylog_screen/dailylog_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   @override
@@ -10,6 +11,7 @@ class DashboardScreen extends StatefulWidget {
 class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.getInstance().init(context);
     return Scaffold(
       backgroundColor: Colors.grey.shade100,
       body: SafeArea(

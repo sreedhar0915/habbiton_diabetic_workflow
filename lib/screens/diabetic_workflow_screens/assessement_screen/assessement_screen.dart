@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:habbiton_diabetic_workflow/utilis/constants/color_constants.dart';
-import 'package:habbiton_diabetic_workflow/view/Dashboard_screen/Dashboard_screen.dart';
-import 'package:habbiton_diabetic_workflow/view/Start_screen/Start_screen.dart';
+import 'package:habbiton_diabetic_workflow/helpers/app_colors.dart';
+import 'package:habbiton_diabetic_workflow/helpers/screen_config.dart';
+import 'package:habbiton_diabetic_workflow/screens/diabetic_workflow_screens/Start_screen/Start_screen.dart';
+import 'package:habbiton_diabetic_workflow/screens/diabetic_workflow_screens/dashboard_screen/dashboard_screen.dart';
 
 class AssessementScreen extends StatefulWidget {
   const AssessementScreen({super.key});
@@ -42,6 +43,7 @@ class _AssessementScreenState extends State<AssessementScreen> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.getInstance().init(context);
     return Scaffold(
       backgroundColor: ColorConstants.white,
       appBar: AppBar(

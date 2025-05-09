@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:habbiton_diabetic_workflow/utilis/constants/color_constants.dart';
+import 'package:habbiton_diabetic_workflow/helpers/app_colors.dart';
+import 'package:habbiton_diabetic_workflow/helpers/screen_config.dart';
 
 class SugarInputField extends StatefulWidget {
   final String label;
@@ -33,6 +34,7 @@ class _SugarInputFieldState extends State<SugarInputField> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.getInstance().init(context);
     return Container(
       height: 70,
       margin: EdgeInsets.symmetric(vertical: 8),

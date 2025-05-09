@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habbiton_diabetic_workflow/view/Start_screen/Start_screen.dart';
+import 'package:habbiton_diabetic_workflow/screens/diabetic_workflow_screens/Start_screen/Start_screen.dart';
 
 void main() {
   runApp(const MyApp());

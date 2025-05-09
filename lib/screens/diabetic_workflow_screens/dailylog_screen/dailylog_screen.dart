@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:habbiton_diabetic_workflow/utilis/constants/color_constants.dart';
-import 'package:habbiton_diabetic_workflow/view/Global_widget/Sugar_inputfield.dart';
+import 'package:habbiton_diabetic_workflow/helpers/app_colors.dart';
+import 'package:habbiton_diabetic_workflow/helpers/screen_config.dart';
+import 'package:habbiton_diabetic_workflow/screens/diabetic_workflow_screens/global_widget/sugar_inputfield.dart';
 
 class DailylogScreen extends StatefulWidget {
   const DailylogScreen({super.key});
@@ -51,6 +52,7 @@ class _DailylogScreenState extends State<DailylogScreen> {
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.getInstance().init(context);
     return Scaffold(
       backgroundColor: ColorConstants.white,
       appBar: AppBar(
