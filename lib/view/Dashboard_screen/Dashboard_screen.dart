@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:habbiton_diabetic_workflow/Utilis/Constants/Color_constants.dart';
-import 'package:habbiton_diabetic_workflow/view/Dailylog_screen/Dailylog_screen.dart';
+import 'package:habbiton_diabetic_workflow/utilis/constants/color_constants.dart';
+import 'package:habbiton_diabetic_workflow/view/dailylog_screen/dailylog_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
   @override

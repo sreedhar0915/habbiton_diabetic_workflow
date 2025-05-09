@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habbiton_diabetic_workflow/Utilis/Constants/Color_constants.dart';
+import 'package:habbiton_diabetic_workflow/utilis/constants/color_constants.dart';
 import 'package:habbiton_diabetic_workflow/view/Dashboard_screen/Dashboard_screen.dart';
 import 'package:habbiton_diabetic_workflow/view/Start_screen/Start_screen.dart';
 

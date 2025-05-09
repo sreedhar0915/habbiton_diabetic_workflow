@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:habbiton_diabetic_workflow/Utilis/Constants/Color_constants.dart';
-import 'package:habbiton_diabetic_workflow/view/Assessement_screen/Assessement_screen.dart';
+import 'package:habbiton_diabetic_workflow/utilis/constants/color_constants.dart';
+import 'package:habbiton_diabetic_workflow/view/assessement_screen/assessement_screen.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});

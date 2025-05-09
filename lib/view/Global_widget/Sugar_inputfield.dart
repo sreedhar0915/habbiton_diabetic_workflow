@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:habbiton_diabetic_workflow/Utilis/Constants/Color_constants.dart';
+import 'package:habbiton_diabetic_workflow/utilis/constants/color_constants.dart';
 
 class SugarInputField extends StatefulWidget {
   final String label;
