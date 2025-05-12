@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:habbiton_diabetic_workflow/helpers/app_colors.dart';
 import 'package:habbiton_diabetic_workflow/helpers/screen_config.dart';
 import 'package:habbiton_diabetic_workflow/screens/diabetic_workflow_screens/global_widget/sugar_inputfield.dart';
@@ -59,10 +60,14 @@ class _DailylogScreenState extends State<DailylogScreen> {
         backgroundColor: ColorConstants.white,
         surfaceTintColor: ColorConstants.white,
         leading: InkWell(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Image.asset("assets/images/Group 1087.png")),
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: SvgPicture.asset(
+            'assets/images/back_button.svg',
+            fit: BoxFit.cover,
+          ),
+        ),
         title: Center(
           child: Text(
             "Daily Blood Sugar Entry",
@@ -196,10 +201,10 @@ class _DailylogScreenState extends State<DailylogScreen> {
                     Container(
                       height: 83,
                       width: 83,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage(
-                                  "assets/images/8354e55a550db97d68dba2a540a717158cbfcede.png"))),
+                      child: SvgPicture.asset(
+                        'assets/images/daliylog_save.svg',
+                        fit: BoxFit.cover,
+                      ),
                     ),
                     SizedBox(height: 16),
                     Text(

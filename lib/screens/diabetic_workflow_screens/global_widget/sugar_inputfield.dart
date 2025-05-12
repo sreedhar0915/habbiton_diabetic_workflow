@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:habbiton_diabetic_workflow/helpers/app_colors.dart';
 import 'package:habbiton_diabetic_workflow/helpers/screen_config.dart';
 
@@ -94,10 +95,10 @@ class _SugarInputFieldState extends State<SugarInputField> {
                           child: Container(
                             height: 24,
                             width: 24,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/Frame (4).png"))),
+                            child: SvgPicture.asset(
+                              'assets/images/greaterthan_button.svg',
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                         SizedBox(height: 1),
@@ -108,10 +109,10 @@ class _SugarInputFieldState extends State<SugarInputField> {
                           child: Container(
                             height: 24,
                             width: 24,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/Frame (5).png"))),
+                            child: SvgPicture.asset(
+                              'assets/images/lessthan_button.svg',
+                              fit: BoxFit.cover,
+                            ),
                           ),
                         ),
                       ],

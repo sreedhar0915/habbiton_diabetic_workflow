@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:habbiton_diabetic_workflow/helpers/app_colors.dart';
 import 'package:habbiton_diabetic_workflow/helpers/screen_config.dart';
 import 'package:habbiton_diabetic_workflow/screens/diabetic_workflow_screens/Start_screen/Start_screen.dart';
@@ -50,14 +51,18 @@ class _AssessementScreenState extends State<AssessementScreen> {
         surfaceTintColor: ColorConstants.white,
         backgroundColor: ColorConstants.white,
         leading: InkWell(
-            onTap: () {
-              Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => StartScreen(),
-                  ));
-            },
-            child: Image.asset("assets/images/Arrow Left.png")),
+          onTap: () {
+            Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => StartScreen(),
+                ));
+          },
+          child: SvgPicture.asset(
+            'assets/images/back_button.svg',
+            fit: BoxFit.cover,
+          ),
+        ),
         title: Center(
             child: Text(
           "Assessment",

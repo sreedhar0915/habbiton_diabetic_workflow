@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:habbiton_diabetic_workflow/helpers/app_colors.dart';
 import 'package:habbiton_diabetic_workflow/helpers/screen_config.dart';
 import 'package:habbiton_diabetic_workflow/screens/diabetic_workflow_screens/assessement_screen/assessement_screen.dart';
@@ -10,7 +11,7 @@ class StartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     ScreenUtil.getInstance().init(context);
     return Scaffold(
-      backgroundColor: const Color(0xFFEECBBE),
+      backgroundColor: ColorConstants.Textcolor,
       body: Column(
         children: [
           Expanded(
@@ -18,19 +19,28 @@ class StartScreen extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned.fill(
-                  child: Container(
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                    image: AssetImage('assets/images/Group 679.png'),
+                  // child: Container(
+                  // decoration: BoxDecoration(
+                  //     image: DecorationImage(
+                  //         image: AssetImage(
+                  //             "assets/images/startscreen_image.png"),
+                  //         fit: BoxFit.cover)),
+                  child: SvgPicture.asset(
+                    'assets/images/startscreen_image.svg',
                     fit: BoxFit.cover,
-                  ))),
+                  ),
+                  // ),
                 ),
                 Positioned(
                     top: 68,
                     left: 29,
                     child: InkWell(
-                        onTap: () {},
-                        child: Image.asset("assets/images/Group 1087.png")))
+                      onTap: () {},
+                      child: SvgPicture.asset(
+                        'assets/images/back_button.svg',
+                        fit: BoxFit.cover,
+                      ),
+                    ))
               ],
             ),
           ),

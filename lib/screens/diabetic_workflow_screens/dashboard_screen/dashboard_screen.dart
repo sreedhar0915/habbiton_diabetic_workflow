@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:habbiton_diabetic_workflow/helpers/app_colors.dart';
 import 'package:habbiton_diabetic_workflow/helpers/screen_config.dart';
 import 'package:habbiton_diabetic_workflow/screens/diabetic_workflow_screens/dailylog_screen/dailylog_screen.dart';
@@ -84,10 +85,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       SizedBox(height: 15),
                       Container(
                         height: 132,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    "assets/images/Frame 1108.png"))),
+                        child: SvgPicture.asset(
+                          'assets/images/graph.svg',
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ],
                   ),
@@ -163,11 +164,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           Container(
                             height: 59,
                             width: 67,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/Rectangle 679.png"),
-                                    fit: BoxFit.cover)),
+                            child: SvgPicture.asset(
+                              'assets/images/doctor.svg',
+                              fit: BoxFit.cover,
+                            ),
                           ),
                           SizedBox(width: 10),
                           Column(
@@ -247,11 +247,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           Container(
                             height: 21,
                             width: 21,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/dd4dd9b590706af686c6dcd72e0187389abd6455.png"),
-                                    fit: BoxFit.cover)),
+                            child: SvgPicture.asset(
+                              'assets/images/exercise.svg',
+                              fit: BoxFit.cover,
+                            ),
                           )
                         ],
                       ),
@@ -319,11 +318,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           Container(
                             height: 21,
                             width: 21,
-                            decoration: BoxDecoration(
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        "assets/images/material-symbols-light_water-full.png"),
-                                    fit: BoxFit.cover)),
+                            child: SvgPicture.asset(
+                              'assets/images/materialsymbols_water.svg',
+                              fit: BoxFit.cover,
+                            ),
                           )
                         ],
                       ),
@@ -348,12 +346,13 @@ class _DashboardScreenState extends State<DashboardScreen> {
                             children: List.generate(
                               8,
                               (index) => Padding(
-                                padding:
-                                    const EdgeInsets.symmetric(horizontal: 4.0),
-                                child: index < 2
-                                    ? Image.asset("assets/images/Layer 3.png")
-                                    : Image.asset("assets/images/Layer 6.png"),
-                              ),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 4.0),
+                                  child: index < 2
+                                      ? SvgPicture.asset(
+                                          "assets/images/waterin.svg")
+                                      : SvgPicture.asset(
+                                          "assets/images/waterout.svg")),
                             ),
                           ),
                         ],
