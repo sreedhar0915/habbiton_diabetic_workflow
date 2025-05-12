@@ -18,28 +18,45 @@ class StartScreen extends StatelessWidget {
             flex: 6,
             child: Stack(
               children: [
+                //   Positioned.fill(
+                //     // child: Container(
+                //     // decoration: BoxDecoration(
+                //     //     image: DecorationImage(
+                //     //         image: AssetImage(
+                //     //             "assets/images/startscreen_image.png"),
+                //     //         fit: BoxFit.cover)),
+                //     child: SvgPicture.asset(
+                //       'assets/images/startscreen_image.svg',
+                //       fit: BoxFit.cover,
+                //     ),
+                //     // ),
+                //   ),
                 Positioned.fill(
-                  // child: Container(
-                  // decoration: BoxDecoration(
-                  //     image: DecorationImage(
-                  //         image: AssetImage(
-                  //             "assets/images/startscreen_image.png"),
-                  //         fit: BoxFit.cover)),
                   child: SvgPicture.asset(
                     'assets/images/startscreen_image.svg',
                     fit: BoxFit.cover,
+                    alignment: Alignment.center,
+                    allowDrawingOutsideViewBox: true,
+                    clipBehavior: Clip.none,
                   ),
-                  // ),
                 ),
                 Positioned(
                     top: 68,
                     left: 29,
                     child: InkWell(
                       onTap: () {},
-                      child: SvgPicture.asset(
-                        'assets/images/back_button.svg',
-                        fit: BoxFit.cover,
-                      ),
+                      child: CircleAvatar(
+                          radius: 14.5,
+                          backgroundColor: ColorConstants.white,
+                          child: Center(
+                              child: Icon(
+                            Icons.arrow_back_ios_new,
+                            size: 20,
+                          ))),
+                      // child: SvgPicture.asset(
+                      //   'assets/images/back_button.svg',
+                      //   fit: BoxFit.cover,
+                      // ),
                     ))
               ],
             ),

@@ -42,7 +42,30 @@ class _DashboardScreenState extends State<DashboardScreen> {
                               builder: (context) => DailylogScreen(),
                             ));
                       },
-                      child: Chip(label: Text('Daily Log'))),
+                      child: Container(
+                          height: 39,
+                          width: 94,
+                          decoration: BoxDecoration(
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.grey.withOpacity(0.2),
+                                  spreadRadius: 2,
+                                  blurRadius: 8,
+                                  offset: Offset(0, 4),
+                                ),
+                              ],
+                              color: ColorConstants.white,
+                              borderRadius: BorderRadius.circular(20),
+                              border:
+                                  Border.all(color: ColorConstants.Textcolor)),
+                          child: Center(
+                              child: Text(
+                            'Daily Log',
+                            style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w400,
+                                color: ColorConstants.Textcolor),
+                          )))),
                 ],
               ),
               Text(

@@ -63,10 +63,13 @@ class _DailylogScreenState extends State<DailylogScreen> {
           onTap: () {
             Navigator.pop(context);
           },
-          child: SvgPicture.asset(
-            'assets/images/back_button.svg',
-            fit: BoxFit.cover,
-          ),
+          child: Icon(Icons.arrow_back_ios_new),
+          // child: SvgPicture.asset(
+          //   'assets/images/back_button.svg',
+          // height: 16,
+          //   width: 8,
+          //   fit: BoxFit.cover,
+          // ),
         ),
         title: Center(
           child: Text(
