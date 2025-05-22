@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:habbiton_diabetic_workflow/helpers/app_colors.dart';
 import 'package:habbiton_diabetic_workflow/helpers/screen_config.dart';
+import 'package:habbiton_diabetic_workflow/helpers/size_extension.dart';
 import 'package:habbiton_diabetic_workflow/screens/diabetic_workflow_screens/dailylog_screen/dailylog_screen.dart';
 
 class DashboardScreen extends StatefulWidget {
@@ -78,6 +79,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               SizedBox(height: 16),
               Container(
                 height: 226,
+                width: double.infinity,
                 decoration: BoxDecoration(
                   color: ColorConstants.white,
                   boxShadow: [

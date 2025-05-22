@@ -11,35 +11,32 @@ class StartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     ScreenUtil.getInstance().init(context);
     return Scaffold(
-      backgroundColor: ColorConstants.Textcolor,
+      backgroundColor: Colors.brown[400],
       body: Column(
         children: [
           Expanded(
             flex: 6,
             child: Stack(
               children: [
-                //   Positioned.fill(
-                //     // child: Container(
-                //     // decoration: BoxDecoration(
-                //     //     image: DecorationImage(
-                //     //         image: AssetImage(
-                //     //             "assets/images/startscreen_image.png"),
-                //     //         fit: BoxFit.cover)),
-                //     child: SvgPicture.asset(
-                //       'assets/images/startscreen_image.svg',
-                //       fit: BoxFit.cover,
-                //     ),
-                //     // ),
-                //   ),
                 Positioned.fill(
-                  child: SvgPicture.asset(
-                    'assets/images/startscreen_image.svg',
-                    fit: BoxFit.cover,
-                    alignment: Alignment.center,
-                    allowDrawingOutsideViewBox: true,
-                    clipBehavior: Clip.none,
+                  child: Container(
+                    height: 826,
+                    decoration: BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage(
+                                "assets/images/startscreen_image.png"),
+                            fit: BoxFit.cover)),
                   ),
                 ),
+                // Positioned.fill(
+                //   child: SvgPicture.asset(
+                //     'assets/images/startscreen_image.svg',
+                //     fit: BoxFit.cover,
+                //     alignment: Alignment.center,
+                //     allowDrawingOutsideViewBox: true,
+                //     clipBehavior: Clip.none,
+                //   ),
+                // ),
                 Positioned(
                     top: 68,
                     left: 29,
